@@ -1,0 +1,8 @@
+#+TITLE: butter-provider-ipfs: turn any butter-provider into ipfs magic
+
+node ./index.js ../path/to/a/butter-provider
+
+this will create 2 orbit databases that will hold fetch() and details()
+results. resolveStream() is not currently supported.
+
+
