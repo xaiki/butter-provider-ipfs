@@ -27,13 +27,14 @@ const createIPFSforProvider = async (provider, args = {}) => {
   while (true) {
     console.error('getting', page);
     let { results, hasMore } = await I.fetch({ page });
-    page++;
     for (let m of results) {
-      await docs.put(m);
-      await feed.add(m[I.config.uniqueId]);
+      const d = await I.detail(m[I.config.uniqueId], m)
+      await docs.put(d);
+      await feed.add(m);
     }
 
     if (!hasMore) break;
+    page++;
   }
 }
 
