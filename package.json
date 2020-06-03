@@ -1,0 +1,15 @@
+{
+  "name": "butter-ipfs-provider",
+  "version": "0.0.1",
+  "description": "turn any butter provider into an ipfs powered one",
+  "main": "index.js",
+  "repository": "https://github.com/butterproviders/butter-ipfs-provider",
+  "author": "Niv Sardi <x@btn.sh>",
+  "license": "GPLv3",
+  "dependencies": {
+    "butter-provider": "^0.12.0",
+    "butter-test-provider": "^0.0.5",
+    "ipfs": "^0.45.0",
+    "orbit-db": "^0.24.1"
+  }
+}
